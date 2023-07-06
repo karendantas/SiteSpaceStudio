@@ -1,0 +1,259 @@
+/* CSS TELA DETALHES */
+*{
+    font-family: 'Inter';
+}
+body {
+    width: auto;
+    margin: auto;
+    background-color: #FBFFE2;
+}
+header img{
+    width: 100%;
+}
+nav div ul{
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    justify-content: space-between;
+}
+nav div ul li{
+    margin-left: 30px;
+    list-style-type: none;
+}
+nav div ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav div ul li img{
+    width: 113px;
+    height: 122px;
+}
+nav div ul .box{
+    box-sizing: border-box;
+    width: 198px;
+    height: 39px;
+    background: #fff;
+    border: 1px solid #FFB3D1;
+    box-shadow: inset 0px 4px 4px rgba(124, 64, 107, 0.6);
+    border-radius: 80px;
+}
+nav div ul li a:hover{
+    border-bottom: 5px solid #B2A4FF;
+}
+input {
+    margin-left: 30px;
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: medium;
+}
+input:focus{
+    background-color: aqua;
+}
+.forms-pesquisa{
+    display: flex;
+    align-items: center;    
+}
+.main-section{
+    display: flex;
+    width: 1400px;
+    margin: auto;
+    justify-content: flex-start;
+    padding-top: 50px;
+}
+.main-section .img-produto img{
+    width: 500px;
+    height: 500px;
+    margin-right: 30px;
+    border-radius: 15px;
+}
+.section-grid{
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "categoria"
+    "descricao"
+    "valor"
+    "bolinhas"
+    "botao-carrinho";
+    grid-template-rows: 58px auto auto auto auto auto;
+    align-content: start;
+    justify-content: center;
+    row-gap: 1rem;
+}
+.section-grid .box1{
+    grid-area: titulo;
+}
+.section-grid .box2{
+    grid-area: categoria;
+    width: 161px;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px #8b5151;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-grid .box3{
+    grid-area: descricao;
+}
+.section-grid .box4{
+    grid-area: valor;
+}
+.section-grid .box5{
+    grid-area: bolinhas;
+    display: flex;
+}
+.section-grid .box6{
+    grid-area: botao-carrinho;
+    width: 513px;
+    height: 90px;
+    background-color: #B2A4FF;
+    box-shadow: 0px 4px 4px #8e6767;
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-grid .box1 h1{
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01rem;
+    color: #B2A4FF;
+    margin: auto;
+}
+.section-grid .box2 p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01rem;
+    color: #000;
+}
+.section-grid .box3 p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.01rem;
+    color: #000;
+    margin: auto;
+    text-align: justify;
+}
+.section-grid .box4  p{
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 44px;
+    letter-spacing: 0.01rem;
+    color: #000;
+    margin: auto;
+}
+.section-grid .box5 p{
+    width: 65px;
+    height: 64px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px #894949;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+.section-grid .box6 p a{
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 39px;
+    letter-spacing: 0.01rem;
+    color: #fff;
+    text-decoration: none;
+}
+.sub-section{
+    width: 1400px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.sub-section h1{
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01rem;
+    color: #B2A4FF;
+    margin: auto;
+    padding-top: 80px;    
+}
+.sub-section .layout{
+    margin-top: 50px;
+    width: 350px;
+    height: 500px;
+    background-color: #fff;
+    flex-shrink: 0;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgb(118, 29, 50, 0.50);
+    grid-template-areas: 
+    "imagem-produto"
+    "nome-produto"
+    "descricao-produto"
+    "valor-produto";
+    display: grid;
+    grid-template-rows: 250px 100px 55px 50px;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 10px;
+}
+.sub-section .box-imagem{
+    grid-area: imagem-produto;
+
+}
+.sub-section .box-nome{
+    grid-area: nome-produto;
+    margin: auto;
+}
+.sub-section .box-descricao{
+    grid-area: descricao-produto;
+    margin: auto;
+}
+.sub-section .box-valor{
+    grid-area: valor-produto;
+    margin: auto;
+}
+.sub-section .layout .box-imagem img{
+    width: 250px;
+    height: 250px;
+    border-radius: 232px;
+    margin-top: 15px;
+}
+.sub-section .layout .box-nome h3{
+    color: #FFB3D1;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.32px;
+    margin: auto;
+    text-align: center;
+}
+.sub-section .layout .box-descricao p{
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 44px;
+    letter-spacing: 0.01rem;
+    color: #000;
+    margin: auto;
+}
+.sub-section .layout .box-valor p{
+    font-size: 32px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 44px;
+    letter-spacing: 0.01rem;
+    color: #000;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.sub-section .organizacao{
+    display: flex;
+    justify-content: space-between  ;
+}
