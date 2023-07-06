@@ -1,13 +1,9 @@
-let searchBtn = document.querySelector('.searchBtn');
+const mobileBtn = document.getElementById('mobile-btn');
 
-let closeBtn = document.querySelector('.closeBtn');
-
-let searchBox = document.querySelector('.searchBox');
-
-searchBtn.oneclick = function(){
-    searchBox.classList.add('active');
+function toggleMenu(event){
+    const navi = document.getElementbyId('navigation');
+    navi.classList.toggle('active'); //o toggle adiciona a classe "active" ao clicarmos no botao, caso nao tenha
+    //a classe, e remove a mesma após clicar novamente.
+    const active = navi.classList.contains('active');
 }
-
-searchBtn.oneclick = function(){
-    closeBtn.classList.remove('active');
-}
+mobileBtn.addEventListener('click', toggleMenu);//criando um evento que ao clicar no botao, aciona  a função toggleMenu
