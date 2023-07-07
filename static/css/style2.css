@@ -1,6 +1,10 @@
 /* CSS TELA DETALHES */
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300&display=swap');
 *{
-    font-family: 'Inter';
+    font-family: Geologica;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
 }
 body {
     width: auto;
