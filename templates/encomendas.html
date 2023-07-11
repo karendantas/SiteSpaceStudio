@@ -39,6 +39,7 @@
 
     <main>
         <section class = "forms-section">
+        <div class="title-alerta">
         <div class="encomenda-title">
             <h1>ENCOMENDAS</h1>
             <p>Encomende produtos personalizados! Basta preencher o formulário a baixo</p>
@@ -48,41 +49,56 @@
                 <circle cx="8" cy="8" r="8"/>
               </svg> ABERTAS</p>
         </div>
-
+        </div>
         <div class="forumlario-enco">
             <form>
                 <div class="form-group">
                     <label for="">Nome completo:</label>
                     <input class = "input-form" type="text" placeholder="ex:fulano biribinho de tal">
                 </div>
-                <div class="form-group endereco-input">
-                    <label for="">Endereço:</label>
-                    <div class = "endnum">
-                        <input class = "input-form" type="text" placeholder="ex: Rua tal, bairro tal">
-                        <label class = "label-num" for="">Número:</label>
-                        <input class = "input-form numin" type="text" name="" id="">
-                    </div>
+
+                <div class = "fieldset">
+                <div class="form-group">
+                    
+                        <label for="">Endereço:</label>
+                        <input class = "input-form enderecoinput" type="text" placeholder="ex: Rua tal, bairro tal">
                 </div>
+                <div class="form-group">
+                    
+                        <label class = "label-num" for="">Número:</label>
+                        <input class = "input-form " type="text" name="" id="">
+                    
+                </div>
+            </div>
+
                 <div class="form-group">
                     <label for="">Email:</label>
                     <input class = "input-form" type="email" name="" placeholder="ex:fulaneichon@gmail.com">
                 </div>
 
-                <div class="form-group catpag">
+            <div class = "fieldset">
+                <div class="form-group">
+            
                     <label for="">Categoria:</label>
-                    <div class = "endnum">
+                    
                     <input class = "input-form" type="email" name="" placeholder="ex:crochê">
-                    <label class = "label-pag"  for="">Forma de pagamento:</label>
-                    <input class = "input-form " type="email" name="" placeholder="ex:crochê">
-                    </div>
                 </div>
+                <div class="form-group">
+                    <label  for="">Forma de pagamento:</label>
+                    <input class = "input-form " type="email" name="" placeholder="ex:crochê">
+                    
+                </div>
+            </div>
 
             </form>
-            <div class="form-group">
+            <div class="form-group txtmobile">
                 <label for="">Descrição:</label>
                 <textarea class = "input-form" name="" id="" cols="30" rows="15" placeholder="">Descrição completa do produtos ex:cor, material, formato, etc.
                 </textarea>
             </div>
+        </div>
+        <div class = "formsbotao">
+        <button class = "form-btn">CONFIRMAR</button>
         </div>
 </section>
 
