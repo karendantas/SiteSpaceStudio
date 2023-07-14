@@ -60,6 +60,14 @@ gap: 3rem;
   
 }
 
+#navigation .menu a, li::before{
+    content: '';
+    border-bottom: 3px solid #9b8ee4;
+  
+    
+}
+
+
 #navigation .box-search{
     width: 100%;
     max-width: 300px;
@@ -73,6 +81,7 @@ gap: 3rem;
 
 .menu-perfil .menu-drop{
     position: absolute;
+    z-index: 99;
     width: 260px;
     font-size: 20px;
     right: 0;
@@ -101,12 +110,13 @@ gap: 3rem;
     background: transparent;
     
 }
-.input-search{
+#navigation .input-search{
    
     border:2px solid #FFB3D1;
     border-radius: 40px;
     padding: 7px;
     width: 100%;
+   max-width: 300px;
     outline: none;
 
 }
@@ -124,7 +134,8 @@ gap: 3rem;
 }
 
 .logo{
-    width: 100px;
+    
+   max-width: 100px;
 }
 
 
@@ -198,11 +209,24 @@ section .main-container{
 }
 
 /* carrossel */
-.carrossel-container{
+.carrossel{
+ 
+  width: 100%;
+  height: 100vh;
+  background-color: #f0b7cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.carrossel .carrossel-container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
 
 .linkmais{
     display: flex;
@@ -231,17 +255,15 @@ section .main-container{
 
 /* PÁGINA DE PRODUTOS ---------------- */
 
- .nome-secao{
-    display: flex;
+ main .nome-secao{
+    
     width: 100%; 
-    max-width:1100px;
-    margin: 0 auto;
-    justify-content: flex-start;
-    align-items: center;
-    gap:2em;
+    max-width:700px !important;
+    margin:0 10%;
+  
 }
 
-.title-secao{
+.nome-secao .title-secao{
     display: flex;
     align-items: center;
     color:#B2A4FF;
@@ -281,6 +303,7 @@ section .main-container{
 .card-item{
     width: 350px;
     border-radius: 30px;
+    background-color: #FBFFE2;
     box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px;
     display: flex;
     flex-direction: column;
@@ -317,6 +340,7 @@ section .main-container{
 width: 100%;
 max-width: 1200px;
 margin: 0 auto;
+margin-bottom: 100px;
 }
 
 .title-alerta{
@@ -332,7 +356,7 @@ margin: 0 auto;
     font-family: inter;
     font-size: 70px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
   
 }
 .alerta-enco{
@@ -355,7 +379,6 @@ margin: 0 auto;
 
 .form-group{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     margin:20px 40px;
 }
@@ -366,7 +389,6 @@ margin: 0 auto;
     border:none;
     border-radius: 30px;
     background-color:#FFB3D1;
-    
     outline: none;
     box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px;
 }
@@ -381,8 +403,6 @@ margin: 0 auto;
 .fieldset .enderecoinput{
    width: 400px;
 }
-
-
 
 
 .formsbotao{
@@ -406,9 +426,146 @@ margin: 0 auto;
 }
 
 .form-btn:hover{
+    background-color: #9587e2;
   
-    background-color: #9b8ee4;
-  
+}
+
+
+/* tela cadastro e login */
+
+.lc-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ 
+}
+
+.contain{
+    
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background-color:#ffdbe8;
+    background-image: url("/static/img/cardlogincadastro.png");
+    background-size: cover;
+    border-radius: 30px;
+    box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px;
+    width: 80%;
+    height: 90%;
+}
+.cadastro-container{
+    display: flex;
+    position: relative;
+}
+
+.contain::before{
+    content: "";
+    position: absolute;
+    background-color: #fff7fa;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 40%;
+    height: 100%;
+}
+
+
+
+.ccolum1{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 1;
+}
+
+
+
+.ccolum2{
+    flex:2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-media{
+    display: flex;
+    align-items: center;
+}
+.social-media>li {
+    border:1.5px solid white;
+    border-radius: 100%;
+    margin:0px 5px;
+    padding: 7px 10px;
+
+}
+.ca-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.ca-form input{
+    border-radius: 30px;
+    border:none;
+    width: 300px;
+    height: 50px;
+    padding: 10px 10px;
+    margin: 10px 0;
+    outline: none;
+    box-shadow: rgb(232, 204, 230) 0px 0px 6px 0px inset, rgba(185, 185, 185, 0.5) -1px 0px 6px 1px inset;
+   
+}
+
+.cadastro-title{
+    font-family: inter;
+    font-size: 30px;
+    color:#a599f3;
+}
+.ca-descrip{
+    max-width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    color:#5a5959;
+}
+.btn-login{
+    border:none;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    margin:0 auto;
+    background-color: #FFB3D1;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px; 
+}
+
+.cad-title{
+    font-family: inter;
+    font-size: 40px;
+    color:#f2efff;
+}
+.btn-cadastro{
+    border:none;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    margin:0 auto;
+    background-color: #FFB3D1;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px; 
+}
+
+.btn-cadastro:hover{
+    background-color: #ee9dbd;
+}
+/* parte do login */
+.login-container{
+    position: absolute;
+    display: none;
 }
 
 /* menu-mobile e responsividade--------------- */
@@ -419,7 +576,7 @@ margin: 0 auto;
 
 @media(max-width: 1100px){
 
-    body{
+    body, main, header, .header-img{
         max-width: 100%;
     }
     #mobilebtn{
@@ -489,25 +646,44 @@ margin: 0 auto;
 
     /*produtos */
 
+
+.nome-secao .title-secao{
+    font-size: 30px;
+    
+}
     
 .produtos-flex{
     width: 100%;
-    max-width: 400px !important;
+   
 }
   
 /*forms*/
-.form-group{
+
+.encomenda-title, .alerta-enco{
+    margin: 0 10%;
+}
+.encomenda-title>h1{
+    font-size: 50px;
+    margin-bottom: 70px;
+}
+.encomenda-title>p{
+    max-width: 300px;
+}
+.alerta-enco{
+    width: 100px;
+    padding: 0;
+    position: absolute;
+    bottom: 35%;
+}
+.form-group, .fieldset{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin:20px 40px;
+   
 }
 
 .input-form{
-   display: flex;
-   width: 300px;
-  
+   width: 400px;
 }
 
 .endnum{
@@ -526,3 +702,5 @@ margin: 0 auto;
         
     }
 }
+
+

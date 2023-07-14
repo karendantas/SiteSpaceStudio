@@ -8,3 +8,5 @@ function toggleMenu(){
     //a classe, e remove a mesma após clicar novamente.
 }
 mobileBtn.addEventListener('click', toggleMenu);//criando um evento que ao clicar no botao, aciona  a função toggleMenu
+
+
