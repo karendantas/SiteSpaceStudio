@@ -9,4 +9,9 @@ function toggleMenu(){
 }
 mobileBtn.addEventListener('click', toggleMenu);//criando um evento que ao clicar no botao, aciona  a função toggleMenu
 
+//logincadastro
+var login = document.querySelector("#login");
+var cadastro = document.querySelector("#cad");
+var body = document.querySelector("body");
+
 

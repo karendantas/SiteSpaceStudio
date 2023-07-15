@@ -432,17 +432,21 @@ margin-bottom: 100px;
 
 
 /* tela cadastro e login */
+.lgbody{
+    background-image: url("/static/img/cardlogincadastro.png");
+    background-size: cover;
+    background-position-y:center;
+    background-color: #FBFFE2; 
+}
 
 .lc-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
- 
 }
 
 .contain{
-    
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
@@ -467,23 +471,27 @@ margin-bottom: 100px;
     border-bottom-left-radius: 30px;
     width: 40%;
     height: 100%;
+
+    left:0;
 }
 
-
-
-.ccolum1{
-    text-align: center;
-    flex: 1 0 auto;
-    z-index: 1;
-}
-
-
-
-.ccolum2{
-    flex:2 0 auto;
+.ccolum1, .lcolum1{
+    width: 40%;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.ccolum2, .lcolum2{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro-container .ccolum2{
+    z-index: 12;
 }
 .social-media{
     display: flex;
@@ -493,16 +501,17 @@ margin-bottom: 100px;
     border:1.5px solid white;
     border-radius: 100%;
     margin:0px 5px;
-    padding: 7px 10px;
-
+    padding: 5px 7px;
+  
 }
-.ca-form{
+.ca-form, .lo-form{
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    margin-top: 10px;
 }
 
-.ca-form input{
+.ca-form input, .lo-form input{
     border-radius: 30px;
     border:none;
     width: 300px;
@@ -510,16 +519,17 @@ margin-bottom: 100px;
     padding: 10px 10px;
     margin: 10px 0;
     outline: none;
+    color:#696969;
     box-shadow: rgb(232, 204, 230) 0px 0px 6px 0px inset, rgba(185, 185, 185, 0.5) -1px 0px 6px 1px inset;
    
 }
 
-.cadastro-title{
+.cadastro-title, .login-title{
     font-family: inter;
     font-size: 30px;
     color:#a599f3;
 }
-.ca-descrip{
+.ca-descrip, .login-description{
     max-width: 250px;
     text-align: center;
     margin: 0 auto;
@@ -540,13 +550,15 @@ margin-bottom: 100px;
     box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px; 
 }
 
-.cad-title{
+.cad-title, .log-title{
     font-family: inter;
     font-size: 40px;
     color:#f2efff;
+    margin: 0;
 }
 .btn-cadastro{
     border:none;
+    margin-top:35px !important;
     border-radius: 30px;
     width: 150px;
     height: 40px;
@@ -555,18 +567,115 @@ margin-bottom: 100px;
     font-size: 20px;
     letter-spacing: 2px;
     font-weight: 600;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 252, 252);
     box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px; 
 }
 
-.btn-cadastro:hover{
+.btn-cadastro:hover, .btn-login:hover{
     background-color: #ee9dbd;
 }
 /* parte do login */
 .login-container{
     position: absolute;
-    display: none;
+    display: flex;   
 }
+
+.login-container .lcolum2{
+    order:1;
+    z-index: -1;
+}
+.login-container .lcolum1{
+    order:2;
+    z-index: -1;
+  
+}
+
+.login-action .cadastro-container .ccolum1,
+.login-action .cadastro-container .ccolum2{
+    z-index: -2;
+   
+}
+
+.login-action .login-container .lcolum1,
+.login-action .login-container .lcolum2{
+    transition: 3s;
+    z-index: 14;
+}
+
+.login-action .contain::before{
+    left:62%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    animation: slidel 2s;
+}
+.cad-action .contain::before{
+animation: slidec 2s;
+
+}
+
+/**/
+.cad-action .login-container .lcolum1,
+.cad-action .login-container .lcolum2{
+    z-index: -2;
+}
+
+.cad-action .cadastro-container .lcolum1,
+.cad-action .cadastro-container .lcolum2{
+    transition: 3s;
+    z-index: 14;
+}
+
+/*animcação*/
+@keyframes slidel{
+    from {
+        left:0;
+        width: 40%;
+    }
+
+    25%{
+        left:30%;
+        width: 50%;
+    }
+    50%{
+        left:40%;
+        width: 60%;
+    }
+    75%{
+        left:52%;
+        width: 50%;
+    }
+    to{
+        left:62%;
+        width: 40%;
+    }
+}
+@keyframes slidec{
+    from {
+        left:62%;
+        width: 40%;
+    }
+
+    25%{
+        left:52%;
+        width: 50%;
+    }
+    50%{
+        left:40%;
+        width: 60%;
+    }
+    75%{
+        left:30%;
+        width: 50%;
+    }
+    to{
+        left:0%;
+        width: 40%;
+    }
+}
+
+
 
 /* menu-mobile e responsividade--------------- */
 
