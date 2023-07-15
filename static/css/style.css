@@ -22,8 +22,8 @@ body{
 header{  
     width: 100%;
     max-width: 2400px;
-
 }
+
 header .header-img{
     height: 25vh;
     width: 100%;
@@ -34,13 +34,10 @@ header .header-img{
     background-size: cover;
 }
 header #navigation {
-    max-width: 2400px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
-
 }
 
 #navigation .menu {
@@ -50,23 +47,18 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 3rem;
-
-
 }
 
 #navigation .menu a, li{
     color:black;
     text-decoration: none;
-  
 }
 
 #navigation .menu a, li::before{
-    content: '';
+    content: " ";
     border-bottom: 3px solid #9b8ee4;
-  
-    
+    left:0;
 }
-
 
 #navigation .box-search{
     width: 100%;
@@ -102,7 +94,7 @@ gap: 3rem;
     color:black;
 }
 
- .search-btn{
+.search-btn{
     position: absolute;
     border:none;
     margin-top: 7px;
@@ -110,31 +102,27 @@ gap: 3rem;
     background: transparent;
     
 }
-#navigation .input-search{
-   
+
+#navigation .box-search .input-search{
     border:2px solid #FFB3D1;
     border-radius: 40px;
     padding: 7px;
-    width: 100%;
-   max-width: 300px;
     outline: none;
-
 }
 
 .user-icon{
+    display: flex;
     margin-left: 20px; 
-
 }
+
 .user-icon > hr{
     background-color:#FFB3D1;
     margin-top:0;
     padding: 0.1em;
     border: none;
-
 }
 
 .logo{
-    
    max-width: 100px;
 }
 
@@ -149,8 +137,7 @@ section .main-container{
     justify-content: space-between;
     padding: 0 5%;
     margin-bottom:10%;
-    margin: 0 auto;
-    
+    margin: 0 auto; 
 }
 
 .main-container .main-h1{
@@ -168,18 +155,18 @@ section .main-container{
     width: 100%;  
     max-width: 700px;
 }
+
 .main-container .main-img{
-   
    display: flex;
    justify-content: flex-end;
 }
+
  .main-imagem{
     display: flex;
     align-items: center;
     margin-top: 40px;
     width: 100%; 
     max-width:1000px;
-    
 }
 
 .main-container .main-btn{
@@ -205,16 +192,16 @@ section .main-container{
 
 .main-separador{
     width: 50%;
- 
 }
 
 /* carrossel */
 .carrossel{
  
   width: 100%;
+  max-width: 1990;
   height: 100vh;
-  background-color: #f0b7cd;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   
@@ -223,10 +210,9 @@ section .main-container{
 .carrossel .carrossel-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
 }
-
-
 
 .linkmais{
     display: flex;
@@ -236,7 +222,9 @@ section .main-container{
     color:#FFB3D1;
     margin-bottom: 70px;
 }
+
 /*footer */
+
 .footer-img{
         height: 25vh;
         width: 100%;
@@ -251,7 +239,6 @@ section .main-container{
     margin-bottom: 3%;
     gap:2%;
 }
-
 
 /* PÁGINA DE PRODUTOS ---------------- */
 
@@ -338,7 +325,7 @@ section .main-container{
 /* PÁGINA DE ENCOMENDAS ------------------- */
 .forms-section{
 width: 100%;
-max-width: 1200px;
+max-width: 1100px;
 margin: 0 auto;
 margin-bottom: 100px;
 }
@@ -347,7 +334,7 @@ margin-bottom: 100px;
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
    
 }
@@ -368,9 +355,8 @@ margin-bottom: 100px;
     box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px;
 }
 
-.forumlario-enco{
-    width: 100%;
-    max-width: 1200px;
+.forms-section .forumlario-enco{
+ 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -384,7 +370,6 @@ margin-bottom: 100px;
 }
 .input-form{
     width: 100%;
-    max-width: 1200px;
     padding: 10px;
     border:none;
     border-radius: 30px;
@@ -685,9 +670,11 @@ animation: slidec 2s;
 
 @media(max-width: 1100px){
 
-    body, main, header, .header-img{
-        max-width: 100%;
+    header #navigation{
+        padding-right: 40px;
+        padding-left: 0;
     }
+
     #mobilebtn{
         display:block;
         border:none;
@@ -696,7 +683,6 @@ animation: slidec 2s;
     .user-icon{
         display: none;
     }
-
 
     #navigation .menu{
         display: block;
@@ -807,8 +793,15 @@ animation: slidec 2s;
 @media(max-width: 400px) {
     #navigation{
         width: 100% !important;
-        max-width: 250px !important; 
+        max-width: 500px !important; 
+        display: flex !important;
+        justify-content:space-between !important ;
+        padding: 0 !important;
         
+        
+    }
+    .box-search .input-search, .search-btn{
+        display:none;
     }
 }
 
