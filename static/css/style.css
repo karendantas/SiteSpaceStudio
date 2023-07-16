@@ -41,12 +41,12 @@ header #navigation {
 }
 
 #navigation .menu {
-width: 100%;
+
 max-width: 2400px;
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 3rem;
+gap: 2rem;
 }
 
 #navigation .menu a, li{
@@ -58,12 +58,6 @@ gap: 3rem;
     content: " ";
     border-bottom: 3px solid #9b8ee4;
     left:0;
-}
-
-#navigation .box-search{
-    width: 100%;
-    max-width: 300px;
-    display: flex;
 }
 
 .menu-perfil  .perfil-icon{
@@ -103,10 +97,11 @@ gap: 3rem;
     
 }
 
-#navigation .box-search .input-search{
+#navigation .input-search{
     border:2px solid #FFB3D1;
     border-radius: 40px;
     padding: 7px;
+    width: 100%;
     outline: none;
 }
 
@@ -288,7 +283,7 @@ section .main-container{
 }
 
 .card-item{
-    width: 350px;
+    width: 300px;
     border-radius: 30px;
     background-color: #FBFFE2;
     box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px;
@@ -301,8 +296,6 @@ section .main-container{
 .card-item:hover{
     background-color: #e9ebd9;
     transition: 0.3s ease-out;
- 
-    
 }
 .card-title{
     font-weight: 600;
@@ -310,10 +303,13 @@ section .main-container{
     font-family: inter;
 }
 .card-img{
-    max-width: 40%;
+    max-width: 35%;
     border: 1px solid black;
     margin-top:30px;
     border-radius: 300px;  
+}
+.card-text{
+    text-align: center;
 }
 
 .flex-categorias{
@@ -325,26 +321,27 @@ section .main-container{
 /* PÁGINA DE ENCOMENDAS ------------------- */
 .forms-section{
 width: 100%;
-max-width: 1100px;
+max-width: 1300px;
 margin: 0 auto;
 margin-bottom: 100px;
 }
 
-.title-alerta{
+
+.forms-section .encomenda-title{
     display: flex;
     align-items: center;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-   
+    flex-direction: row;
+    gap: 2em;
 }
+
 .encomenda-title >h1{
     color:#B2A4FF;
     font-family: inter;
     font-size: 70px;
-    width: 100%;
-    max-width: 1100px;
-  
+}
+.title-alerta >p{
+    width: 600px;
+    font-size: 20px;
 }
 .alerta-enco{
     padding: 5px;
@@ -356,11 +353,14 @@ margin-bottom: 100px;
 }
 
 .forms-section .forumlario-enco{
- 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  
+    background-image: url("/static/img/cardlogincadastro.png");
+    height: 100vh;
+    align-items: center;
+    background-size: cover;
+    border-radius: 30px;
 }
 
 .form-group{
@@ -370,12 +370,13 @@ margin-bottom: 100px;
 }
 .input-form{
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     border:none;
     border-radius: 30px;
-    background-color:#FFB3D1;
+    background-color:#ffffff;
     outline: none;
-    box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgb(232, 204, 230) 0px 0px 6px 0px inset, rgba(185, 185, 185, 0.5) -1px 0px 6px 1px inset;
+  
 }
 
 .fieldset{
@@ -388,8 +389,6 @@ margin-bottom: 100px;
 .fieldset .enderecoinput{
    width: 400px;
 }
-
-
 .formsbotao{
     width: 100%;
     max-width: 950px;
@@ -412,7 +411,7 @@ margin-bottom: 100px;
 
 .form-btn:hover{
     background-color: #9587e2;
-  
+
 }
 
 
@@ -643,15 +642,15 @@ animation: slidec 2s;
     }
 
     25%{
-        left:52%;
+        left:58%;
         width: 50%;
     }
     50%{
-        left:40%;
+        left:30%;
         width: 60%;
     }
     75%{
-        left:30%;
+        left:20%;
         width: 50%;
     }
     to{
@@ -763,12 +762,6 @@ animation: slidec 2s;
 }
 .encomenda-title>p{
     max-width: 300px;
-}
-.alerta-enco{
-    width: 100px;
-    padding: 0;
-    position: absolute;
-    bottom: 35%;
 }
 .form-group, .fieldset{
     display: flex;
