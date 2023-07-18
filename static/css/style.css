@@ -41,8 +41,6 @@ header #navigation {
 }
 
 #navigation .menu {
-
-max-width: 2400px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -59,7 +57,7 @@ gap: 2rem;
     border-bottom: 3px solid #9b8ee4;
 
 }
-.menu-perfil  .perfil-icon{
+#navigation .menu-perfil  .perfil-icon{
     position: relative;
     float:left;
 }
@@ -87,26 +85,29 @@ gap: 2rem;
     color:black;
 }
 
-.search-btn{
+#navigation .search-btn{
     position: absolute;
     border:none;
     margin-top: 7px;
     margin-left: 4px;
     background: transparent;
-    
 }
 
+#navigation .box-search{
+   width: auto;
+  
+}
 #navigation .input-search{
     border:2px solid #FFB3D1;
     border-radius: 40px;
     padding: 7px;
-    width: 100%;
     outline: none;
+    width: 250px;
 }
 
-.user-icon{
+#navigation .user-icon{
     display: flex;
-    margin-left: 20px; 
+  
 }
 
 .user-icon > hr{
@@ -236,12 +237,29 @@ section .main-container{
 
 /* PÁGINA DE PRODUTOS ---------------- */
 
- main .nome-secao{
-    
-    width: 100%; 
-    max-width:700px !important;
-    margin:0 10%;
-  
+.LAYOUT{
+    display: flex;
+}
+.listagem{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 240px;
+    margin-right: 30px;
+    margin-top: 90%;
+}
+.listagem > div{
+    border: 1px solid #9587e2;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10%;
+}
+.list-listagem{
+   padding: 0;
+}
+.nome-secao{
+    max-width:700px ;
+    margin:0 5%;
 }
 
 .nome-secao .title-secao{
@@ -252,6 +270,7 @@ section .main-container{
     font-family: inter;
     -webkit-filter: drop-shadow(1px 1px 1px #a1a1a1);
     filter: drop-shadow(1px 2px 2px #7e7e7e);
+    border-bottom: 2px solid #9587e2;
 }
 
 .box-red {
@@ -277,14 +296,12 @@ section .main-container{
     margin: 0 auto;
 }
 
-.produtos-flex>.card-img{
-    flex:1 1;  
-}
+
 
 .card-item{
     width: 300px;
     border-radius: 30px;
-    background-color: #FBFFE2;
+    background-color: #ffffff;
     box-shadow: rgba(78, 26, 56, 0.25) 0px 6px 12px -2px, rgba(114, 26, 77, 0.3) 0px 3px 7px -3px;
     display: flex;
     flex-direction: column;
@@ -314,6 +331,9 @@ section .main-container{
 .flex-categorias{
     display:flex;
     justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 
 }
 
@@ -322,6 +342,7 @@ section .main-container{
 width: 100%;
 max-width: 1300px;
 margin: 0 auto;
+padding: 0 5%;
 margin-bottom: 100px;
 }
 
@@ -341,7 +362,6 @@ margin-bottom: 100px;
 }
 .title-alerta >p{
     max-width: 600px;
-    
     font-size: 20px;
     margin-bottom: 50px;
 
@@ -360,7 +380,7 @@ margin-bottom: 100px;
     justify-content: center;
     flex-wrap: wrap;
     background-image: url("/static/img/cardlogincadastro.png");
-    height: 100vh;
+    height: 80vh;
     align-items: center;
     background-size: cover;
     border-radius: 30px;
@@ -627,7 +647,6 @@ margin-bottom: 100px;
 @media(max-width: 1100px){
 
     header #navigation{
-        padding-right: 40px;
         padding-left: 0;
     }
 
@@ -636,8 +655,9 @@ margin-bottom: 100px;
         border:none;
         background-color: transparent;
     }
+  
     .user-icon{
-        display: none;
+        display: none !important;
     }
 
     #navigation .menu{
@@ -664,6 +684,11 @@ margin-bottom: 100px;
         padding: 20px;
     }
     
+    #navigation .menu li:hover {
+        background-color: #eaeed0;
+    }
+
+    
     #navigation input{
        width: 300px;
        padding: 10px;
@@ -673,7 +698,7 @@ margin-bottom: 100px;
         width: 100% !important;
         max-width: 1100px !important; 
     }
-    #navigation.active .menu{
+    #navigation.active .menu {
         height: 100vh;
         visibility: visible;
         overflow-y: auto;
@@ -699,7 +724,7 @@ margin-bottom: 100px;
 
 
 .nome-secao .title-secao{
-    font-size: 30px;
+    font-size: 50px;
     
 }
     
@@ -707,8 +732,11 @@ margin-bottom: 100px;
     width: 100%;
    
 }
-  
+}
 /*forms*/
+
+@media (max-width:1200px) {
+    
 
 .title-alerta{
     margin: 0 5%;
@@ -725,6 +753,7 @@ margin-bottom: 100px;
    
 }
 
+
 .input-form{
    width: 400px;
 }
@@ -736,9 +765,28 @@ margin-bottom: 100px;
     gap:1em;
 }
 .forumlario-enco{
-    height: 150vh !important;
+    height: 130vh !important;
+}
+.form-btn{
+  margin: 0 auto;
+
 }
 
+}
+@media (max-width:900px){
+    .aside{
+        display: flex;
+        flex-direction: column;
+    }
+    .listagem{
+        display: flex;
+        flex-direction: row;
+        height: 20vh;
+        width: 100%;
+        max-width: 600px;
+        justify-content: center;
+        margin: 10px auto 20px auto ;
+    }
 }
 
 @media(max-width: 400px) {
@@ -763,5 +811,6 @@ margin-bottom: 100px;
     .encomenda-title{
         display: block !important;
     }
+    
 }
 
