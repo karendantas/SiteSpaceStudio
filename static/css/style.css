@@ -330,12 +330,20 @@ section .main-container{
 }
 
 .flex-categorias{
+    
     display:flex;
     justify-content: space-around;
     width: 100%;
+    text-align: center;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 5% auto;
 
+}
+
+.img-cat{
+    width: 150px;
+    border-radius: 200px;
+    
 }
 
 /* PÁGINA DE ENCOMENDAS ------------------- */
@@ -766,14 +774,14 @@ margin-bottom: 100px;
     flex-direction: column;
     gap:1em;
 }
-.forumlario-enco{
-    height: 130vh !important;
-}
 .form-btn{
-  margin: 0 auto;
-
+    margin: 0 auto;
+    
 }
 
+.forumlario-enco{
+    height: 150vh !important;
+}
 }
 @media (max-width:900px){
     .LAYOUT{
