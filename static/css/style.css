@@ -319,8 +319,8 @@ section .main-container{
     font-family: inter;
 }
 .card-img{
-    max-width: 35%;
-    border: 1px solid black;
+    max-width: 40%;
+    
     margin-top:30px;
     border-radius: 300px;  
 }
@@ -732,6 +732,7 @@ margin-bottom: 100px;
     width: 100%;
    
 }
+
 }
 /*forms*/
 
@@ -774,18 +775,32 @@ margin-bottom: 100px;
 
 }
 @media (max-width:900px){
-    .aside{
+    .LAYOUT{
         display: flex;
         flex-direction: column;
     }
-    .listagem{
+    .aside{
         display: flex;
-        flex-direction: row;
-        height: 20vh;
+        flex-direction: column !important;
         width: 100%;
-        max-width: 600px;
+        max-width: 800px;
+        margin:0 auto;
+    }
+     .listagem{
+        
+        margin-top:5% !important;
+        margin-bottom: 5% !important;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: center;
-        margin: 10px auto 20px auto ;
+        align-items: center;
+        margin: 0 auto;
+        height: 30vh;
+        width: 600px;
+    }
+    .listagem>div{
+        padding: 0 5%;
     }
 }
 
@@ -812,5 +827,8 @@ margin-bottom: 100px;
         display: block !important;
     }
     
+    .listagem{
+        display: none;
+    }
 }
 
