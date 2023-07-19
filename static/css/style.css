@@ -210,6 +210,9 @@ section .main-container{
     align-items: center;
 }
 
+.cardprimeiro{
+    display: none;
+}
 .linkmais{
     display: flex;
     justify-content: center;
@@ -783,7 +786,15 @@ margin-bottom: 100px;
     height: 150vh !important;
 }
 }
-@media (max-width:900px){
+@media (max-width:930px){
+    .cardprimeiro{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .carrossel{
+        display: none;
+    }
     .LAYOUT{
         display: flex;
         flex-direction: column;

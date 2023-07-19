@@ -379,3 +379,35 @@ main .texto{
     color: #B2A4FF;
     letter-spacing: 1px;
 }
+
+/*cliente*/
+
+.cliente{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+    gap:1em;
+    align-items: center;
+    border: 2px solid #FFB3D1;
+    border-radius: 40px;
+    margin-bottom: 40px;
+}
+.rosah2{
+    font-size: 30px;
+    color: #B2A4FF;
+    letter-spacing: 1px;
+}
+
+.rosaimg{
+    max-width: 450px;
+    height: 50vh;
+    border-radius: 40px;
+}
+.rosatxt{
+    font-size: 20px;
+    text-align: justify;
+    padding: 5%;
+
+}
