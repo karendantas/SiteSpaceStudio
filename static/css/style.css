@@ -191,6 +191,12 @@ section .main-container{
 }
 
 /* carrossel */
+
+.destaqueh2{
+    font-size: 30px;
+    font-family: inter;
+    color:#9587e2
+}
 .carrossel{
  
   width: 100%;
@@ -451,12 +457,7 @@ margin-bottom: 100px;
 
 
 /* tela cadastro e login */
-.lgbody{
-    background-image: url("/static/img/cardlogincadastro.png");
-    background-size: cover;
-    background-position-y:center;
-    background-color: #FBFFE2; 
-}
+
 
 .lc-container{
     display: flex;
