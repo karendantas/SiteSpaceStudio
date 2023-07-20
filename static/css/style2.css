@@ -59,6 +59,13 @@
     justify-content: center;
     row-gap: 1rem;
 }
+
+@media (max-width:700px) {
+    .section-grid{
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+}
 .section-grid .box1{
     grid-area: titulo;
 }
